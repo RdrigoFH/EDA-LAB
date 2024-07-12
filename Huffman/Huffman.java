@@ -12,7 +12,10 @@ public class Huffman{
 
       // solo puede haber un nodo raiz, el resto se convertiran en hijos
       while(queue.size() > 1){
-         
+         Node left = queue.poll();
+         Node right = queue.poll();
+         Node fusion = new Node(left.frequecy+right.frequecy, '\0', left, right);
+         queue.add(fusion);
       }
    }
 
