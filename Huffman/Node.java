@@ -1,10 +1,13 @@
 public class Node implements Comparable<Node>{
-   int frecuecy;
-   char c;
-   Node right;
-   Node left;
+   private int frequecy;
+   private char c;
+   private Node right;
+   private Node left;
 
    public int compareTo(Node node){
-      return this.frecuecy - node.frecuecy;
+      return this.frequecy - node.frequecy;
+   }
+   public Node(int frequency, char c){
+      this.frequecy = frequency; this.c = c;
    }
 }
