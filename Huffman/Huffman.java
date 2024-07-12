@@ -19,7 +19,14 @@ public class Huffman{
       }
       return queue.poll();
    }
-
+   
+   public HashMap<Character, Integer> buildMap(String str){
+      HashMap<Character, Integer> map = new HashMap<>();
+      for(char ch : str.toCharArray()){
+         map.compute(ch, (key,value) -> (key== null)? 1 : value + 1);
+      }
+      return map;
+   }  
 
    public static void main(String[] args) {
 
